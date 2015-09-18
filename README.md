@@ -2,11 +2,19 @@
 
 Microsite temporaire pour la version 2016 du Web à Québec
 
-## Procédure de build
+## Installation
 
-`gem install sass-globbing`
-`npm install`
-`gulp build`
+    bundle install
+    npm install
 
-Vous pouvez aussi partir un petit webserveur en faisant seulement `gulp`
+## Développement
 
+    npm start
+
+## Compilation de production
+
+    run-script build
+
+## Crédits
+
+Tristan, Paul, JP!
