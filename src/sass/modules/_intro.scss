@@ -1,0 +1,8 @@
+.intro{
+
+	background-color: $c-intro-bg-top-right;
+	@include filter-gradient($c-intro-bg-bottom-left, $c-intro-bg-top-right, horizontal);
+	@include background-image(linear-gradient(left bottom, $c-intro-bg-bottom-left 0%,$c-intro-bg-top-right 100%));
+	height: 100vh;
+
+}

@@ -1,0 +1,59 @@
+// ------------------------------ //
+//             Layout             //
+// ------------------------------ //
+
+:first-child {
+    margin-top: 0;
+}
+
+:last-child {
+    margin-bottom: 0;
+}
+
+.l-page-wrapper {
+    position: relative;
+    width: $document-width;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 0;
+    @include respond-to($document-width + $spacing-default * 2) {
+        width: auto;
+        padding: 0 $spacing-default;
+    }
+    @include respond-to(tablet) {
+        width: auto;
+        padding: 0 $spacing-tablet;
+    }
+    @include respond-to(mobile) {
+        width: auto;
+        padding: 0 $spacing-mobile;
+    }
+    .is-zoomed & {
+        width: auto;
+        margin: 0 $spacing-default;
+    }
+}
+
+.l-content-section {
+    position: relative;
+}
+
+.l-fullwidth {
+    position: relative;
+    left: 50%;
+    width: 100vw;
+    @include transform(translateX(-50%));
+    .ie8 & {
+        left: auto;
+        width: auto;
+        padding: 0;
+        @include transform(translateX(0));
+    }
+}
+
+.l-block-content,
+.l-block-sidebar {
+    position: relative;
+    font-size: 1rem;
+    @include clearfix;
+}

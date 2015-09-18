@@ -1,0 +1,103 @@
+// --------------------------------- //
+//             Variables             //
+// --------------------------------- //
+
+$spacing-default: 40px;
+$spacing-tablet: 30px;
+$spacing-mobile: 20px;
+$document-width: 1280px;
+$document-width-inner: $document-width - $spacing-default * 2;
+
+// ------------------------------------- //
+//             Media queries             //
+// ------------------------------------- //
+
+// Media queries
+$mq-breakpoints: (
+    "mobile": (
+        min: false,
+        max: 767px,
+        grid: true,
+        export: true
+    ),
+    "tablet": (
+        min: 768px,
+        max: 1024px,
+        grid: true,
+        export: true
+    ),
+    "desktop": (
+        min: 1025px,
+        max: false,
+        grid: true,
+        export: true
+    ),
+    "mobile-tablet": (
+        min: false,
+        max: 1024px,
+        grid: false,
+        export: false
+    ),
+    "document-width": (
+        min: false,
+        max: $document-width,
+        grid: false,
+        export: false
+    )
+);
+
+// ------------------------------ //
+//             Colors             //
+// ------------------------------ //
+
+$colors: (
+    "black": (
+        "base": #000
+    ),
+    "white": (
+        "base": #fff
+    ),
+    "blue": (
+        "base": #00effb,
+        "darker": #00d8f1
+    ),
+    "orange": (
+        "base": #ff8000
+    )
+);
+
+@function color($color, $tone: "base") {
+    @if map-has-key($colors, $color) {
+        @return map-get(map-get($colors, $color), $tone);
+    } @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$color}`. Please make sure it is defined in `$colors` map.";
+        @return null;
+    }
+}
+
+// ------------------------------ //
+
+$c-bg-document: color("black");
+$c-border-default: color("white");
+$c-txt-default: color("black");
+$c-txt-headers: color("white");
+$c-txt-intro: color("white");
+$c-txt-links: color("white");
+$c-alert: color("blue");
+
+$c-intro-bg-top-right: color("blue");
+$c-intro-bg-bottom-left:  color("blue","darker");
+
+$c-tickets-bg: color("orange");
+
+
+// ----------------------------- //
+//             Fonts             //
+// ----------------------------- //
+
+$ff-roboto: "Roboto", "Arial", sans-serif;
+
+// ------------------------------ //
+
+$ff-default: $ff-roboto;
+$ff-headers: $ff-roboto;
