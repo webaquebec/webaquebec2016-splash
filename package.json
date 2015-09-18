@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "Microsite temporaire pour la version 2016 du Web à Québec",
   "url": "http://127.0.0.1:3000",
-  "keywords": "",
-  "repository": "",
+  "keywords": ["waq"],
+  "repository": "https://github.com/webaquebec/webaquebec2016-splash",
   "jsname": "OPWAQ16",
   "browserify": {
     "transform": [
