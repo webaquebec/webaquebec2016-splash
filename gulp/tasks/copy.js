@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var gulpif = require('gulp-if');
 var imagemin = require('gulp-imagemin');
+var fse = require('fs-extra')
 var config = require('../config.js');
 
 gulp.task('copy:js', function() {
@@ -23,4 +24,8 @@ gulp.task('copy:svg', function() {
         .pipe(gulp.dest(config.build + 'svg/originals'));
 });
 
-gulp.task('copy', ['copy:js', 'copy:img', 'copy:svg']);
+gulp.task('copy:cname', function() {
+    return fse.copy('CNAME', config.build + 'CNAME', {});
+});
+
+gulp.task('copy', ['copy:js', 'copy:img', 'copy:svg', 'copy:cname']);
