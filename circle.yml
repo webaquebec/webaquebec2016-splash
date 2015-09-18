@@ -10,3 +10,7 @@ deployment:
     branch: master
     commands:
       - bin/deploy
+general:
+  branches:
+    ignore:
+      - gh-pages
