@@ -1,4 +1,4 @@
-# Onepage - WAQ 2016
+# Onepager - WAQ 2016
 
 Microsite temporaire pour la version 2016 du Web à Québec
 
