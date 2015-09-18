@@ -1,6 +1,0 @@
-install:
-  - bundle install
-  - npm install
-script: npm run-script build
-deploy:
-  skip_cleanup: true

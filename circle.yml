@@ -1,0 +1,12 @@
+dependencies:
+  pre:
+    - bundle install
+    - npm install
+test:
+  override:
+    - npm run-script build
+deployment:
+  production:
+    branch: master
+    commands:
+      - bin/deploy
