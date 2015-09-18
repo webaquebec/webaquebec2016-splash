@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e # exit with nonzero exit code if anything fails
+
+cd build
+git init
+
+git config user.name "Circle CI"
+git config user.email "info@webaquebec.org"
+
+git add .
+git commit -m "Deploy to GitHub Pages"
+git push --force git@github.com:webaquebec/webaquebec2016-splash.git master:gh-pages
