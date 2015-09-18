@@ -11,6 +11,10 @@
       "browserify-shim"
     ]
   },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build"
+  },
   "browser": {
     "jquery": "./src/js/vendor/jquery.min.js",
     "is": "./src/js/vendor/is.min.js",
