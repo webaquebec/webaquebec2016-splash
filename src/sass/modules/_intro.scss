@@ -1,8 +1,137 @@
 .intro{
 
+
 	background-color: $c-intro-bg-top-right;
 	@include filter-gradient($c-intro-bg-bottom-left, $c-intro-bg-top-right, horizontal);
 	@include background-image(linear-gradient(left bottom, $c-intro-bg-bottom-left 0%,$c-intro-bg-top-right 100%));
-	height: 100vh;
+	
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	
+	p,a,h1 {
+		color: $c-intro-txt;
+	}
+	
+	p{
+		@include rem-typo(18px, 26px);
+		margin-bottom: 1.5em;
+	}
+	
+	.l-page-wrapper{
+		min-height: 100vh;
+		position: relative;
+	}
+	
+	.l-block-content{
+		position: absolute;
+		bottom: 75px;
+		z-index: 50;
+	}
+	
+	.eventbrite{
+		font-weight: bold;
+		@include rem-typo(20px, 26px);
+		&:hover{
+			text-decoration: none;
+			svg{
+				transform: scale(1.1,1.1);
+			}
+		}
+	}
+	
+	.paralax-viewport{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top:0;
+		left:0;
+		
+		.parallax-layer{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top:0;
+			left: 0;
+		}
+		
+		.chateau{
+			position: absolute;
+			right: 5%;
+			bottom: 0;
+			width: 50%;
+			height: auto;
+		}
+		/*
+		.cloud{
+			height: 15px;
+			background-color: white;
+			opacity: 0.6;
+			position: absolute;
+			top: 0;
+			left: 0;
+			@include border-radius(100px);
+		}
+		
+		.front{
+		
+			@for $i from 1 through 10 {
+			  .cloud:nth-child(#{$i}) { 
+				  width: random(5)*50px;
+				  top: random(100)*0.5%;
+				  left: random(50)*1%; 
+			  }
+			}
+			
+			@for $i from 11 through 20 {
+			  .cloud:nth-child(#{$i}) { 
+				  width: random(5)*50px;
+				  top: random(100)*0.5%;
+				  left: random(50)*1% + 50%; 
+			  }
+			}
+		}
+		
+		.back{
+		
+			.cloud{
+				height: 12px;
+				opacity: 0.4
+			}
+			
+		
+			@for $i from 1 through 10 {
+			  .cloud:nth-child(#{$i}) { 
+				  width: random(5)*50px;
+				  top: random(100)*0.5%;
+				  left: random(50)*1%; 
+			  }
+			}
+			
+			@for $i from 11 through 20 {
+			  .cloud:nth-child(#{$i}) { 
+				  width: random(5)*50px;
+				  top: random(100)*0.5%;
+				  left: random(50)*1% + 50%; 
+			  }
+			}
+		}*/
+	}
+	
+	&:after{
+		content: "";
+		display: block;
+		height: 120vw;
+		width: 120vw;
+		background-color: $c-cfp-bg;
+		border-radius: 120vw;
+		-webkit-border-radius:  120vw;
+		position: absolute;
+		bottom: -105vw;
+		left: 50%;
+		z-index: 10;
+		transform: translateX(-50%) scale(1.7,1);
+	}
+	
 
 }

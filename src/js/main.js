@@ -7,7 +7,7 @@ var Helpers = require('./helpers');
 // Webfont
 var Webfont = require('./modules/webfont.js');
 OPWAQ16.Webfont = Webfont({
-    fonts: ['Roboto', 'Roboto:bold', 'Roboto:italic']
+    fonts: ['Titillium+Web:300', 'Titillium+Web:400', 'Titillium+Web:600', 'Titillium+Web:700']
 });
 
 // Paralax

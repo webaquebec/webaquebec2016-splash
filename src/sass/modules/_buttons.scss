@@ -1,3 +1,99 @@
 // ------------------------------- //
 //             Buttons             //
 // ------------------------------- //
+
+
+.btn{
+    display: inline-block;
+	
+	padding: rem(8px) rem(25px);
+	text-transform: uppercase;
+	font-weight: 600;
+	@include border-radius(4px);
+	background-color: color("grey");
+	
+	&.has-hard-shadow{
+		-webkit-box-shadow: 0 3px 0 0 rgba(0,0,0,0.2);
+		box-shadow: 0 3px 0 0 rgba(0,0,0,0.2);
+	}
+	
+	&.has-soft-shadow-hover:hover{
+		-webkit-box-shadow: 0 -3px 20px -5px rgba(0,0,0,0.5);
+		box-shadow: 0 -3px 20px -5px rgba(0,0,0,0.5);
+	}
+	
+	&.is-bold{
+		font-weight: bold;
+	}
+	
+	&.is-big{
+		@include rem-typo(22px, 26px);
+	}
+	
+	&.is-round{
+		padding: rem(5px);
+		line-height: 0;
+		@include border-radius(100px);
+	}
+	
+	&.c-orange{
+		background-color: color("orange");
+		color: color("white");
+		text-decoration: none;
+		
+		&:hover{
+			background-color: color("orange","dark");
+		}
+	}
+	
+	&.c-blue{
+		background-color: color("blue", "darkest");
+		color: color("white");
+		text-decoration: none;
+		
+		&:hover{
+			background-color: color("white");
+			color: color("blue", "dark");
+		}
+	}
+	
+	&.c-twitter{
+		background-color: $c-twitter;
+		color: color("white");
+		fill: color("white");
+		text-decoration: none;
+		
+		&:hover{
+			background-color: color("grey", "faint");
+			color: $c-twitter;
+			fill: $c-twitter;
+		}
+	}
+	
+	&.c-facebook{
+		background-color: $c-facebook;
+		color: color("white");
+		fill: color("white");
+		text-decoration: none;
+		
+		&:hover{
+			background-color: color("grey", "faint");
+			color: $c-facebook;
+			fill: $c-facebook;
+		}
+	}
+	
+	&.c-instagram{
+		background-color: $c-instagram;
+		color: color("white");
+		fill: color("white");
+		text-decoration: none;
+		
+		&:hover{
+			background-color: color("grey", "faint");
+			color: $c-instagram;
+			fill: $c-instagram;
+		}
+	}
+
+}

@@ -5,7 +5,7 @@
 $spacing-default: 40px;
 $spacing-tablet: 30px;
 $spacing-mobile: 20px;
-$document-width: 1280px;
+$document-width: 678px;
 $document-width-inner: $document-width - $spacing-default * 2;
 
 // ------------------------------------- //
@@ -16,27 +16,15 @@ $document-width-inner: $document-width - $spacing-default * 2;
 $mq-breakpoints: (
     "mobile": (
         min: false,
-        max: 767px,
-        grid: true,
-        export: true
-    ),
-    "tablet": (
-        min: 768px,
-        max: 1024px,
+        max: 678px,
         grid: true,
         export: true
     ),
     "desktop": (
-        min: 1025px,
+        min: 678px,
         max: false,
         grid: true,
         export: true
-    ),
-    "mobile-tablet": (
-        min: false,
-        max: 1024px,
-        grid: false,
-        export: false
     ),
     "document-width": (
         min: false,
@@ -59,11 +47,24 @@ $colors: (
     ),
     "blue": (
         "base": #00effb,
-        "darker": #00d8f1
+        "dark": #00daf2,
+        "darker": #00d8f1,
+        "darkest": #00bfdf,
+        "text": #4dc6e1,
+        "twitter": #78cdf0,
+        "facebook": #537bbd
     ),
     "orange": (
-        "base": #ff8000
-    )
+        "base": #ff8000,
+        "dark": #e47200
+    ),
+    "grey": (
+        "base": #989e9f,
+        "light": #b0b8b9,
+        "faint": #e5eff1,
+        "instagram": #696a6a,
+        "dark": #cfd1d3
+    ),
 );
 
 @function color($color, $tone: "base") {
@@ -77,27 +78,52 @@ $colors: (
 
 // ------------------------------ //
 
-$c-bg-document: color("black");
+$c-bg-document: color("white");
 $c-border-default: color("white");
 $c-txt-default: color("black");
-$c-txt-headers: color("white");
-$c-txt-intro: color("white");
-$c-txt-links: color("white");
+$c-txt-headers: color("black");
+$c-txt-intro: color("black");
+$c-txt-links: color("black");
 $c-alert: color("blue");
 
 $c-intro-bg-top-right: color("blue");
 $c-intro-bg-bottom-left:  color("blue","darker");
+$c-intro-txt: color("white");
 
-$c-tickets-bg: color("orange");
+$c-cfp-bg: color("blue");
+$c-cfp-content-bg: color("white");
+$c-cfp-title: color("blue", "text");
+$c-cfp-txt: color("grey");
 
+$c-newsletter-bg: color("white");
+$c-newsletter-title: color("blue", "text");
+$c-newsletter-txt: color("blue", "text");
+$c-newsletter-input-bg: color("grey", "dark");
+$c-newsletter-input-txt: color("white");
+$c-newsletter-submit-bg: color("orange");
+$c-newsletter-submit-bg-hover: color("orange", "dark");
+$c-newsletter-submit-txt: color("white");
+
+$c-past-bg: color("blue", "dark");
+$c-past-title: color("white");
+$c-past-txt: color("white");
+
+$c-footer-bg: color("white");
+$c-footer-txt: color("blue", "darkest");
+$c-footer-by: color("grey", "light");
+$c-footer-hr: color("blue", "darkest");
+
+$c-twitter: color("blue", "twitter");
+$c-facebook: color("blue", "facebook");
+$c-instagram: color("grey", "instagram");
 
 // ----------------------------- //
 //             Fonts             //
 // ----------------------------- //
 
-$ff-roboto: "Roboto", "Arial", sans-serif;
+$ff-titillium: "Titillium Web", "Arial", sans-serif;
 
 // ------------------------------ //
 
-$ff-default: $ff-roboto;
-$ff-headers: $ff-roboto;
+$ff-default: $ff-titillium;
+$ff-headers: $ff-titillium;

@@ -1,0 +1,98 @@
+.cfp{
+
+	position: relative;
+
+	&:before{
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100px;
+		position: absolute;
+		top: -60px;
+		left: 0;
+		z-index: 20;
+		@include background-image(linear-gradient(top,  rgba($c-cfp-bg,0) 0%, rgba($c-cfp-bg,1) 75%, rgba($c-cfp-bg,1) 100%));
+	}
+
+	background-color: $c-cfp-bg;
+	text-align: center;
+	
+	.boat-wrapper{
+		fill: #00d9f2;
+		position: absolute;
+		top: -60px;
+		right: 10px;
+		z-index: 10;
+		width: 200px;
+		animation-name: anim-move-boat;
+		animation-duration: 60s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		svg{
+			animation-name: anim-rock-boat;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+			animation-timing-function: ease-in-out;
+		}
+	}
+	
+	.l-content-wrapper{
+		background: url('../img/wave.png');
+		animation-name: anim-vagues;
+		animation-duration: 10s;
+	    animation-iteration-count: infinite;
+	    animation-timing-function: ease-in-out;
+	    padding-top: 40px;
+	    position: relative;
+	    z-index: 50;
+	}
+	
+	.l-block-content{
+		padding: 60px 90px 50px 90px;
+		background-color: $c-cfp-content-bg;
+		@include border-top-radius(25px);
+		
+		.title{
+			color: $c-cfp-title;
+			margin-bottom:0;
+		}
+		
+		p{
+			color: $c-cfp-txt;
+		}
+	}
+
+}
+
+@keyframes anim-move-boat {
+    from {
+    	right: -200px;
+    }
+    to {
+    	right: 110vw;
+    }
+}
+
+@keyframes anim-rock-boat {
+    from {
+    	transform: rotate(0deg);
+    }
+    25% {
+		transform: rotate(10deg);
+    }
+    75% {
+    	transform: rotate(-10deg);
+    }
+    to {
+    	transform: rotate(0deg);
+    }
+}
+
+@keyframes anim-vagues {
+    from {
+    	background-position: 0 0;
+    }
+    to {
+    	background-position: 284px 0;
+    }
+}

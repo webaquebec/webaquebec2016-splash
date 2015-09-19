@@ -9,17 +9,18 @@
 
 h1,
 .h1 {
-    @include rem-typo(48px);
+    @include rem-typo(37px);
 }
 
 h2,
 .h2 {
-    @include rem-typo(32px);
+    @include rem-typo(30px);
+    font-weight: 600;
 }
 
 h3,
 .h3 {
-    @include rem-typo(24px);
+    @include rem-typo(20px);
 }
 
 h4,
@@ -41,7 +42,7 @@ p,
 li,
 button {
     color: $c-txt-default;
-    @include rem-typo(16px);
+    @include rem-typo(16px, 24px);
 }
 
 a {

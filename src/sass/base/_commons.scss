@@ -143,3 +143,15 @@
     margin-bottom: 3px;
     margin-left: 30px;
 }
+
+.no-list-style{
+	margin: 0;
+	padding:0;
+	list-style-type: none;
+	
+	li{
+		margin: 0;
+		padding:0;
+		display: inline-block;
+	}
+}
