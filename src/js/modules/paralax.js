@@ -8,11 +8,11 @@ function Paralax(obj, config) {
     this.paralaxViewport = obj;
     this.config = $.extend({}, config);
 
-    this.init();
+    //this.init();
 }
 
 $.extend(Paralax.prototype, {
-    bindEvents: function() {
+    init: function() {
 		// Declare parallax on layers
 		this.paralaxViewport.find('.parallax-layer').parallax({
 			mouseport: this.paralaxViewport

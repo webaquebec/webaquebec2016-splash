@@ -1,6 +1,5 @@
 .intro{
 
-
 	background-color: $c-intro-bg-top-right;
 	@include filter-gradient($c-intro-bg-bottom-left, $c-intro-bg-top-right, horizontal);
 	@include background-image(linear-gradient(left bottom, $c-intro-bg-bottom-left 0%,$c-intro-bg-top-right 100%));
@@ -19,25 +18,36 @@
 	}
 	
 	.l-page-wrapper{
-		min-height: 100vh;
+		height: 90vh;
+		min-height: 500px;
+		max-height: 700px;
 		position: relative;
 	}
 	
 	.l-block-content{
 		position: absolute;
 		bottom: 75px;
+		left:0;
+	    padding: 0 20px;
 		z-index: 50;
 	}
 	
 	.eventbrite{
 		font-weight: bold;
 		@include rem-typo(20px, 26px);
+		transition: all .2s ease-in-out;
 		&:hover{
 			text-decoration: none;
 			svg{
 				transform: scale(1.1,1.1);
 			}
 		}
+	}
+	
+	.counter{
+		position: absolute;
+	    top: -18vh;
+	    width: calc(100% - 20px);
 	}
 	
 	.paralax-viewport{

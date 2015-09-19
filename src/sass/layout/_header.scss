@@ -1,3 +1,31 @@
 // ------------------------------ //
 //             Header             //
 // ------------------------------ //
+
+.l-header{
+	position: absolute;
+	top: 0;
+	left:0;
+	z-index: 100;
+	width: 100%;
+	
+	.l-page-wrapper{
+		width: 100vw;
+		padding-top: 30px;
+	}
+	
+	.logo-wrapper{
+		fill: white;
+		margin-left: 30px;
+	}
+	
+	p{
+		display: inline-block;
+		color: white;
+		margin: 0;
+		vertical-align: middle;
+		margin-left: 10px;
+		font-weight: 600;
+	}
+	
+}
