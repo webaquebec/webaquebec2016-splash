@@ -41,6 +41,14 @@
 		    transition-duration: 0;
 		}
 		
+		@include respond-to(mobile){
+			text-align: center;
+			display: block;
+			@include rem-typo(25px, 40px);
+			margin: 0 auto !important;
+			width: 100%;
+		}
+		
 	}
 }
 

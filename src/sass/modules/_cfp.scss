@@ -1,7 +1,7 @@
 .cfp{
 
 	position: relative;
-
+	
 	&:before{
 		content: "";
 		display: block;
@@ -10,19 +10,27 @@
 		position: absolute;
 		top: -60px;
 		left: 0;
-		z-index: 20;
+		z-index: 60;
 		@include background-image(linear-gradient(top,  rgba($c-cfp-bg,0) 0%, rgba($c-cfp-bg,1) 75%, rgba($c-cfp-bg,1) 100%));
 	}
 
 	background-color: $c-cfp-bg;
 	text-align: center;
 	
+	.boat-viewport{
+		position: absolute;
+		top: -60px;
+		width: 100%;
+		overflow: hidden;
+		height: 200px;
+	}
+	
 	.boat-wrapper{
 		fill: #00d9f2;
 		position: absolute;
-		top: -60px;
+		top: 0;
 		right: 10px;
-		z-index: 10;
+		z-index: 50;
 		width: 200px;
 		animation-name: anim-move-boat;
 		animation-duration: 60s;
@@ -33,6 +41,16 @@
 			animation-duration: 10s;
 			animation-iteration-count: infinite;
 			animation-timing-function: ease-in-out;
+			
+			@include respond-to(mobile){
+				animation-name: none;
+			}
+		}
+		
+		@include respond-to(mobile){
+			animation-name: none;
+			right: auto;
+			left: 10px; 
 		}
 	}
 	
@@ -44,11 +62,20 @@
 	    animation-timing-function: ease-in-out;
 	    padding-top: 40px;
 	    position: relative;
-	    z-index: 50;
+	    z-index: 100;
+	    
+	    @include respond-to(mobile){
+	    	animation-name: none; 
+	    }
 	}
 	
 	.l-block-content{
 		padding: 60px 90px 50px 90px;
+		
+		@include respond-to(mobile){
+			padding: 40px 20px 50px 20px;
+		}
+		
 		background-color: $c-cfp-content-bg;
 		@include border-top-radius(25px);
 		

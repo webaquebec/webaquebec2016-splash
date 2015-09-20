@@ -4,19 +4,29 @@
 
 .l-footer {
 	text-align: center;
-	padding: 20px 0 0 0;
+	padding: 30px 0 0 0;
 	
 	.l-page-wrapper{
 		max-width: 540px;
 	}
-	
-	li{
-		margin-top: 0 !important;
+	ul{
+		li{
+			margin-top: 0 !important;
+		}
+		
+		@include respond-to(mobile){
+			text-align: center;
+		}
 	}
 	
 	p{
 		color: $c-footer-txt;
 		font-weight: 300;
+		
+		@include respond-to(mobile){
+			text-align: center;
+		}
+		
 		a{
 			font-weight: 400;
 			color: $c-footer-txt;

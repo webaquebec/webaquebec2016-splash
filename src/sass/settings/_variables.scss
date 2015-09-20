@@ -56,7 +56,8 @@ $colors: (
     ),
     "orange": (
         "base": #ff8000,
-        "dark": #e47200
+        "dark": #e47200,
+        "light": #ff972f
     ),
     "grey": (
         "base": #989e9f,
@@ -89,6 +90,7 @@ $c-alert: color("blue");
 $c-intro-bg-top-right: color("blue");
 $c-intro-bg-bottom-left:  color("blue","darker");
 $c-intro-txt: color("white");
+$c-intro-btn-color-hover: color("orange", "light");
 
 $c-cfp-bg: color("blue");
 $c-cfp-content-bg: color("white");
