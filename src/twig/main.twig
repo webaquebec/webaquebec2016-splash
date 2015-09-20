@@ -3,25 +3,21 @@
 <html lang="fr">
 <head>
 
-    {% if title is empty %}
-    <title>{{ get_project_name() }} - {{ get_project_version() }}</title>
-    {% else %}
-    <title>{{ title }}</title>
-    {% endif %}
+    <title>Web à Québec</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-    <meta name="description" content="{{ get_project_description() }}">
-    <meta name="dcterms.description" content="{{ get_project_description() }}" />
-    <meta name="keywords" content="{{ get_project_keywords() }}" />
+    <meta name="description" content="Le plus grand événement numérique francophone en Amérique est de retour pour une 6e édition!">
+    <meta name="dcterms.description" content="Le plus grand événement numérique francophone en Amérique est de retour pour une 6e édition!" />
+    <meta name="keywords" content="web a quebec, web à québec, waq, waq15, waq16, waq2015, waq2016, quebec numerique, quebec, numerique" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="{{ get_project_name() }}" />
+    <meta property="og:title" content="Web à Québec - Édition 2016" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="{{ get_project_url() }}" />
-    <meta property="og:description" content="{{ get_project_description() }}" />
+    <meta property="og:image" content="http://2016-splash.webaquebec.org/img/share-fb.jpg" />
+    <meta property="og:url" content="http://2016-splash.webaquebec.org/" />
+    <meta property="og:description" content="Le plus grand événement numérique francophone en Amérique est de retour pour une 6e édition!" />
 
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
