@@ -2,58 +2,6 @@
 //             Counter             //
 // ------------------------------- //
 
-/*
-
-852
-
-participants
-
-56
-
-conférences
-
-7
-
-keynotes
-
-5
-
-salles
-
-thématiques
-
-3
-
-jours
-
-97%
-
-taux de 
-
-satisfaction
-
-100kg
-
-de fromage
-
-60kg
-
-de saucisses
-
-2400
-
-lunchs
-
-60
-
-bénévoles
-
-WAQ 2015 
-
-en chiffres
-
-*/
-
 var $ = require('jquery');
 
 function Counter(obj, config) {
@@ -142,8 +90,6 @@ $.extend(Counter.prototype, {
     	
     	if(!self)
     		self = this
-    		
-    	console.log(self);
     	
     	self.counter.find('.text').width(self.counter.find('.text span').width());
     	setTimeout(function(){
@@ -161,7 +107,6 @@ $.extend(Counter.prototype, {
     		var digit4 = (nbDigits>3?number.charAt(3):0);
     		var digit5 = (nbDigits>4?number.charAt(4):0);
     		var digit6 = (nbDigits>5?number.charAt(5):0);
-    		console.log(digit1,digit2,digit3,digit4,digit5,digit6)
     		
     		self.counter.find('.odometer').removeClass('digits-1 digits-2 digits-3 digits-4 digits-5 digits-6');
     		self.counter.find('.odometer').addClass('digits-'+nbDigits);
