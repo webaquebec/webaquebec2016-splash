@@ -3,31 +3,31 @@
 	background-color: $c-intro-bg-top-right;
 	@include filter-gradient($c-intro-bg-bottom-left, $c-intro-bg-top-right, horizontal);
 	@include background-image(linear-gradient(left bottom, $c-intro-bg-bottom-left 0%,$c-intro-bg-top-right 100%));
-	
+
 	text-align: center;
 	position: relative;
 	overflow: hidden;
-	
+
 	@include respond-to(mobile){
 		padding-top: 160px;
 	}
-	
+
 	p,a,h1 {
 		color: $c-intro-txt;
 	}
-	
+
 	p{
 		@include rem-typo(18px, 26px);
 		margin-bottom: 1.5em;
 	}
-	
+
 	.l-page-wrapper{
 		height: 90vh;
 		max-height: 700px;
 		min-height: 500px;
 		position: relative;
 	}
-	
+
 	.l-block-content{
 		position: absolute;
 		bottom: 75px;
@@ -35,11 +35,11 @@
 	    padding: 0 20px;
 		z-index: 100;
 		padding-top: 19vh;
-		
+
 		@media (max-height: 500px) {
 			padding-top: 96px;
 		}
-		
+
 		@include respond-to(mobile){
 			position: relative;
 			bottom: auto;
@@ -47,37 +47,36 @@
 		    padding-top: 130px;
 		}
 	}
-	
+
 	.eventbrite{
 		font-weight: bold;
 		@include rem-typo(20px, 30px);
 		transition: all .2s ease-in-out;
 		&:hover{
 			text-decoration: none;
-			color: $c-intro-btn-color-hover;
 			svg{
 				transform: scale(1.1,1.1);
 			}
 		}
 	}
-	
+
 	.counter{
 		position: absolute;
 	    top: 0;
 	    width: calc(100% - 40px);
-	    
+
 	    @include respond-to(mobile){
 	    	width: 100%;
 	    }
 	}
-	
+
 	.paralax-viewport{
 		width: 100%;
 		height: 100%;
 		position: absolute;
 		top:0;
 		left:0;
-		
+
 		.parallax-layer{
 			width: 100%;
 			height: 100%;
@@ -85,7 +84,7 @@
 			top:0;
 			left: 0;
 		}
-		
+
 		.chateau{
 			position: absolute;
 			right: 5%;
@@ -94,15 +93,15 @@
 			height: auto;
 			z-index: 20;
 		}
-		
+
 		.clouds{
 			width: 100%;
 			margin-top: 20px;
-			
+
 			@include respond-to(mobile){
 				display:none;
 			}
-			 
+
 			.first{
 				width: 100%;
 				height: 100%;
@@ -112,12 +111,12 @@
 				animation-duration: 150s;
 				animation-iteration-count: infinite;
 				animation-timing-function: linear;
-				
+
 				@include respond-to(mobile){
 					animation-name: none;
 				}
 			}
-			
+
 			.scnd{
 				width: 100%;
 				height: 100%;
@@ -128,13 +127,13 @@
 				animation-duration: 150s;
 				animation-iteration-count: infinite;
 				animation-timing-function: linear;
-				
+
 				@include respond-to(mobile){
 					animation-name: none;
 				}
 			}
 		}
-		
+
 		.cloud{
 			height: 15px;
 			background-color: white;
@@ -144,150 +143,150 @@
 			left: 0;
 			@include border-radius(100px);
 		}
-		
+
 		.front{
 			z-index: 30;
-		
-			.cloud:nth-child(1) { 
+
+			.cloud:nth-child(1) {
 				width: percentage(154/1280);
 				top: 20%;
-				left: 20%; 
+				left: 20%;
 			}
-			
-			.cloud:nth-child(2) { 
+
+			.cloud:nth-child(2) {
 				width: percentage(154/1280);
 				top: 15%;
-				left: 25%; 
+				left: 25%;
 			}
-			
-			.cloud:nth-child(3) { 
+
+			.cloud:nth-child(3) {
 				width: percentage(100/1280);
 				top: 30%;
-				left: 10%; 
+				left: 10%;
 			}
-			
-			.cloud:nth-child(4) { 
+
+			.cloud:nth-child(4) {
 				width: percentage(180/1280);
 				top: 38%;
-				left: 20%; 
+				left: 20%;
 			}
-			
-			.cloud:nth-child(5) { 
+
+			.cloud:nth-child(5) {
 				width: percentage(120/1280);
 				top: 40%;
-				left: 5%; 
+				left: 5%;
 			}
-			
-			.cloud:nth-child(6) { 
+
+			.cloud:nth-child(6) {
 				width: percentage(120/1280);
 				top: 2%;
-				left: 75%; 
+				left: 75%;
 			}
-			
-			.cloud:nth-child(7) { 
+
+			.cloud:nth-child(7) {
 				width: percentage(180/1280);
 				top: 15%;
-				left: 60%; 
+				left: 60%;
 			}
-			
-			.cloud:nth-child(8) { 
+
+			.cloud:nth-child(8) {
 				width: percentage(150/1280);
 				top: 20%;
-				left: 70%; 
+				left: 70%;
 			}
-			
-			.cloud:nth-child(9) { 
+
+			.cloud:nth-child(9) {
 				width: percentage(100/1280);
 				top: 40%;
-				left: 80%; 
+				left: 80%;
 			}
-			
-			.cloud:nth-child(10) { 
+
+			.cloud:nth-child(10) {
 				width: percentage(180/1280);
 				top: 34%;
-				left: 70%; 
+				left: 70%;
 			}
 		}
-		
+
 		.back{
 			z-index: 10;
 			margin-top: 25px;
-			
+
 			.first{
 				animation-duration: 200s;
 			}
-			
+
 			.scnd{
 				animation-duration: 200s;
 			}
-			
+
 			.cloud{
 				height: 12px;
 				opacity: 0.4
 			}
-			
-			.cloud:nth-child(1) { 
+
+			.cloud:nth-child(1) {
 				width: percentage(154/1280);
 				top: 15%;
-				left: 20%; 
+				left: 20%;
 			}
-			
-			.cloud:nth-child(2) { 
+
+			.cloud:nth-child(2) {
 				width: percentage(154/1280);
 				top: 20%;
-				left: 25%; 
+				left: 25%;
 			}
-			
-			.cloud:nth-child(3) { 
+
+			.cloud:nth-child(3) {
 				width: percentage(180/1280);
 				top: 38%;
-				left: 10%; 
+				left: 10%;
 			}
-			
-			.cloud:nth-child(4) { 
+
+			.cloud:nth-child(4) {
 				width: percentage(100/1280);
 				top: 30%;
-				left: 20%; 
+				left: 20%;
 			}
-			
+
 			.cloud:nth-child(5) {
 				width: percentage(120/1280);
-				top: 2%; 
-				left: 5%; 
+				top: 2%;
+				left: 5%;
 			}
-			
-			.cloud:nth-child(6) { 
+
+			.cloud:nth-child(6) {
 				width: percentage(120/1280);
 				top: 40%;
-				left: 75%; 
+				left: 75%;
 			}
-			
+
 			.cloud:nth-child(7) {
 				width: percentage(150/1280);
-				top: 20%; 
-				left: 60%; 
+				top: 20%;
+				left: 60%;
 			}
-			
-			.cloud:nth-child(8) { 
+
+			.cloud:nth-child(8) {
 				width: percentage(180/1280);
 				top: 15%;
-				left: 70%; 
+				left: 70%;
 			}
-			
-			.cloud:nth-child(9) { 
+
+			.cloud:nth-child(9) {
 				width: percentage(180/1280);
 				top: 20%;
-				left: 80%; 
+				left: 80%;
 			}
-			
-			.cloud:nth-child(10) { 
+
+			.cloud:nth-child(10) {
 				width: percentage(100/1280);
 				top: 38%;
-				left: 70%; 
+				left: 70%;
 			}
 		}
 	}
-	
+
 	&:after{
 		content: "";
 		display: block;
@@ -302,7 +301,7 @@
 		z-index: 40;
 		transform: translateX(-50%) scale(1.7,1);
 	}
-	
+
 
 }
 
