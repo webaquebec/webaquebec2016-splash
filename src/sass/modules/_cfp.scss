@@ -1,7 +1,7 @@
 .cfp{
 
 	position: relative;
-	
+
 	&:before{
 		content: "";
 		display: block;
@@ -16,7 +16,7 @@
 
 	background-color: $c-cfp-bg;
 	text-align: center;
-	
+
 	.boat-viewport{
 		position: absolute;
 		top: -60px;
@@ -24,7 +24,7 @@
 		overflow: hidden;
 		height: 200px;
 	}
-	
+
 	.boat-wrapper{
 		fill: #00d9f2;
 		position: absolute;
@@ -41,19 +41,20 @@
 			animation-duration: 10s;
 			animation-iteration-count: infinite;
 			animation-timing-function: ease-in-out;
-			
+			transform-origin: 50% 100%;
+
 			@include respond-to(mobile){
 				animation-name: none;
 			}
 		}
-		
+
 		@include respond-to(mobile){
 			animation-name: none;
 			right: auto;
-			left: 10px; 
+			left: 10px;
 		}
 	}
-	
+
 	.l-content-wrapper{
 		background: url('../img/wave.png');
 		animation-name: anim-vagues;
@@ -63,27 +64,27 @@
 	    padding-top: 40px;
 	    position: relative;
 	    z-index: 100;
-	    
+
 	    @include respond-to(mobile){
-	    	animation-name: none; 
+	    	animation-name: none;
 	    }
 	}
-	
+
 	.l-block-content{
 		padding: 60px 90px 50px 90px;
-		
+
 		@include respond-to(mobile){
 			padding: 40px 20px 50px 20px;
 		}
-		
+
 		background-color: $c-cfp-content-bg;
 		@include border-top-radius(25px);
-		
+
 		.title{
 			color: $c-cfp-title;
 			margin-bottom:0;
 		}
-		
+
 		p{
 			color: $c-cfp-txt;
 		}
