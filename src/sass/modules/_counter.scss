@@ -17,30 +17,30 @@
 	    transition: all 1s ease-in-out;
 	    overflow: hidden;
 	    vertical-align: middle;
-	
+
 		/*
 		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 		transition: all 1s cubic-bezier(0, 1.2, 1, 1.2);
-		
+
 		&.change{
 			-webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 			clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 		}
 		*/
-		
+
 		&.change{
 			width:0 !important;
 			margin-left: 0;
 		}
-		
+
 		&.get-width{
 			width:auto !important;
 			visibility: hidden;
 		    -webkit-transition-duration: 0; /* Safari */
 		    transition-duration: 0;
 		}
-		
+
 		@include respond-to(mobile){
 			text-align: center;
 			display: block;
@@ -48,7 +48,7 @@
 			margin: 0 auto !important;
 			width: 100%;
 		}
-		
+
 	}
 }
 
@@ -64,7 +64,7 @@
 	transition: all 0.5s ease-out;
 	position: relative;
 	background-color: color("blue", "dark");
-	
+
 	&:before{
 		content: "";
 		display: block;
@@ -77,7 +77,7 @@
 		border-radius: 5px;
 		@include background-image(linear-gradient(top, rgba(color("blue", "dark"),0.8) 0%,rgba(color("blue", "dark"),0) 20%,rgba(color("blue", "dark"),0) 80%,rgba(color("blue", "dark"),0.8) 100%));
 	}
-	
+
 	ul.digits {
 		list-style: none;
 		padding: 0px;
@@ -85,14 +85,14 @@
 		width: 500px;
 		position: relative;
 		z-index: 10;
-		
+
 		li.digit {
 			position: relative;
 			float: left;
 			background-color: transparent;
 			width: rem(40px);
 			height: rem(60px);
-			
+
 			.cou-item {
 				ul {
 					position: absolute;
@@ -103,12 +103,12 @@
 					top: 0px;
 					width: 100%;
 					height: rem(40px);
-					
+
 					backface-visibility: hidden;
 					transform-origin: 50% 50%;
 					transform: translate(0, 0em);
 					transition: all 1s cubic-bezier(0, 1.2, 1, 1.2);
-					
+
 					li {
 						display: block;
 						background-color: transparent;
@@ -124,33 +124,43 @@
 }
 
 .goto-0 {
+	-webkit-transform:translateY(rem(-40px)) !important;
 	transform:translateY(rem(-40px)) !important;
 }
 .goto-1 {
+	-webkit-transform:translateY(rem(-40px*2)) !important;
 	transform:translateY(rem(-40px*2)) !important;
 }
 .goto-2 {
+	-webkit-transform:translateY(rem(-40px*3)) !important;
 	transform:translateY(rem(-40px*3)) !important;
 }
 .goto-3 {
+	-webkit-transform:translateY(rem(-40px*4)) !important;
 	transform:translateY(rem(-40px*4)) !important;
 }
 .goto-4 {
+	-webkit-transform:translateY(rem(-40px*5)) !important;
 	transform:translateY(rem(-40px*5)) !important;
 }
 .goto-5 {
+	-webkit-transform:translateY(rem(-40px*6)) !important;
 	transform:translateY(rem(-40px*6)) !important;
 }
 .goto-6 {
+	-webkit-transform:translateY(rem(-40px*7)) !important;
 	transform:translateY(rem(-40px*7)) !important;
 }
 .goto-7 {
 	transform:translateY(rem(-40px*8)) !important;
+	-webkit-transform:translateY(rem(-40px*8)) !important;
 }
 .goto-8 {
+	-webkit-transform:translateY(rem(-40px*9)) !important;
 	transform:translateY(rem(-40px*9)) !important;
 }
 .goto-9 {
+	-webkit-transform:translateY(rem(-40px*10)) !important;
 	transform:translateY(rem(-40px*10)) !important;
 }
 
