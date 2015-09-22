@@ -26,6 +26,9 @@
 		max-height: 700px;
 		min-height: 500px;
 		position: relative;
+		@include respond-to(mobile){
+			height: 500px;
+		}
 	}
 
 	.l-block-content{
@@ -41,6 +44,7 @@
 		}
 
 		@include respond-to(mobile){
+			padding-top: 96px;
 			position: relative;
 			bottom: auto;
 			padding:0;
