@@ -25,7 +25,7 @@
 		height: 200px;
 	}
 
-	.boat-wrapper{
+	.boat-wrapper-move{
 		fill: #00d9f2;
 		position: absolute;
 		top: 0;
@@ -36,7 +36,7 @@
 		animation-duration: 60s;
 		animation-iteration-count: infinite;
 		animation-timing-function: linear;
-		svg{
+		.boat-wrapper{
 			animation-name: anim-rock-boat;
 			animation-duration: 10s;
 			animation-iteration-count: infinite;
