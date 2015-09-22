@@ -17,3 +17,5 @@ OPWAQ16.Components.paralax = Paralax($('.paralax-viewport'));
 // Counter
 var Counter = require('./modules/counter.js');
 OPWAQ16.Components.counter = Counter($('.counter'));
+
+svg4everybody();
