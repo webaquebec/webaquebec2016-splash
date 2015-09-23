@@ -27,7 +27,7 @@
 		min-height: 500px;
 		position: relative;
 		@include respond-to(mobile){
-			height: 500px;
+			height: auto;
 		}
 	}
 
