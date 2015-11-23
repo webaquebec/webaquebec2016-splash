@@ -1,7 +1,6 @@
-.mtl-price {
-  font-weight: bold;
+.cfp .l-block-content .mtl-price {
+  color: #96CB3C;
   font-size: 30px;
-  margin-bottom: 0;
 }
 
 .mlt-price-sub {
@@ -15,12 +14,16 @@
 .mtl {
   text-align: center;
 
+  h2 { color: #254087; }
+
   h3 {
-    color: #333;
+    color: #4dc6e1;
     font-size: 16px;
     font-weight: bold;
     margin: 0 12px 0 12px;
     text-align: left;
+
+    a { color: #3E8B9C; }
   }
 }
 
@@ -30,8 +33,9 @@
 
 .mtl-item {
   display: inline-block;
-  width: 50%;
+  width: 100%;
   margin: 0;
+  max-width: 400px;
   padding-bottom: 40px;
   text-align: left;
   vertical-align: top;
