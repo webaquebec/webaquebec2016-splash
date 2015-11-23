@@ -16,23 +16,49 @@
   text-align: center;
 }
 
+.mtl-item-wrapper {
+  font-size:0;
+}
+
 .mtl-item {
-  margin-bottom: 40px;
+  display: inline-block;
+  width: 50%;
+  margin: 0;
+  padding-bottom: 40px;
+  text-align: left;
+  vertical-align: top;
 
   svg { fill: #ffffff; }
+
+  .item-icon {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
   .item-title {
     color: #333;
     font-size: 16px;
     font-weight: bold;
+    margin: 0 12px 0 12px;
   }
 
   .item-desc {
+    margin: 0 12px 0 12px;
     color: #666;
+    font-size: 14px;
 
     p {
       color: #333;
       margin: 0;
     }
   }
+}
+
+.mtl-call-to-action {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 640px) {
+  .mtl-item { width: 100%; }
 }
