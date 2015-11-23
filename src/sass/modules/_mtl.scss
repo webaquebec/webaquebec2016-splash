@@ -60,11 +60,33 @@
   margin-bottom: 40px;
 }
 
+.mtl-buy-button {
+  @include border-radius(4px);
+
+  background-color: #96CB3C;
+  color: #fff;
+  display: inline-block;
+  font-weight: 600;
+  margin-top: 0;
+  padding: rem(8px) rem(25px);
+  text-transform: uppercase;
+  transition: all .2s ease-in-out;
+
+  &:hover { text-decoration: none; }
+}
+
+.mtl-limited-qty {
+  color: #666;
+  font-size: 13px;
+  font-style: italic;
+}
+
 .mtl-waq-more {
   text-align: left;
   color: #666;
   font-size: 14px;
-  margin: 0 12px 0 12px;
+  margin: 0 12px 40px 12px;
+
 }
 
 @media screen and (max-width: 640px) {
