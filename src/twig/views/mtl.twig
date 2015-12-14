@@ -13,3 +13,7 @@
 {% include '../sections/past.twig' %}
 
 {% endblock %}
+
+{% block fbq %}
+fbq('track', 'ViewContent');
+{% endblock %}
