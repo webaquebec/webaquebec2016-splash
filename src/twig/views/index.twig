@@ -1,14 +1,19 @@
 {% extends "../layouts/single-column.twig" %}
 
-{% set title = 'Web à Québec 2016' %}
-{% set introEventbrite = true %}
+{% set title = 'Web à Québec 2016 - Forfait MTL Deloitte' %}
+{% set introEventbrite = false %}
 {% set class = '' %}
 
 {% block content %}
 
 {% include '../sections/intro.twig' %}
-{% include '../sections/cfp.twig' %}
-{% include '../sections/newsletter.twig' %}
+
+{% include '../sections/mtl-head.twig' %}
+{% include '../sections/mtl-body.twig' %}
 {% include '../sections/past.twig' %}
 
+{% endblock %}
+
+{% block fbq %}
+fbq('track', 'ViewContent');
 {% endblock %}
